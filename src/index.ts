@@ -1,4 +1,4 @@
-import type { Disposable, ExtensionContext, Location } from 'vscode'
+import type { Disposable, ExtensionContext } from 'vscode'
 import { StatusBarAlignment, Uri, commands, env, window } from 'vscode'
 
 let registeredCommands: Disposable[] = []
@@ -29,6 +29,14 @@ export function activate(context: ExtensionContext) {
     statusBar.show()
 
     return [command, statusBar]
+  }
+
+  const addRepositoryConnection = () => {
+    const statusBar = window.createStatusBarItem(StatusBarAlignment.Left, 0)
+    statusBar.command = 'openInGitHub.openProject'
+    statusBar.text = '$(git-pull-request) Repo'
+    statusBar.tooltip = 'Open projects repository'
+    statusBar.show()
   }
 
   const refreshState = () => {
@@ -76,6 +84,7 @@ export function activate(context: ExtensionContext) {
     renderLien()
   })
 
+  addRepositoryConnection()
   renderLien()
 }
 

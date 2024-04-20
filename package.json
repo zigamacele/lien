@@ -1,11 +1,11 @@
 {
   "publisher": "zigamacele",
   "name": "lien",
-  "displayName": "lien",
+  "displayName": "Lien",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.0.1",
-  "description": "",
+  "description": "Extension for creating and managing custom links in the status bar, providing quick access to important resources right from your editor.",
   "author": "Ziga Macele",
   "license": "MIT",
   "funding": "https://github.com/sponsors/zigamacele",
@@ -46,6 +46,9 @@
   "sponsor": {
     "url": "https://github.com/sponsors/zigamacele"
   },
+  "extensionPack": [
+    "fabiospampinato.vscode-open-in-github"
+  ],
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
