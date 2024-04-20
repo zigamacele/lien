@@ -1,24 +1,21 @@
 {
-  "publisher": "antfu",
-  "name": "ext-name",
-  "displayName": "ext-name",
-  "version": "0.0.0",
+  "publisher": "zigamacele",
+  "name": "lien",
+  "displayName": "lien",
+  "version": "0.0.1",
   "private": true,
-  "packageManager": "pnpm@8.10.5",
+  "packageManager": "pnpm@9.0.1",
   "description": "",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Ziga Macele",
   "license": "MIT",
-  "funding": "https://github.com/sponsors/antfu",
-  "homepage": "https://github.com/antfu/ext-name#readme",
+  "funding": "https://github.com/sponsors/zigamacele",
+  "homepage": "https://github.com/zigamacele/lien#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/antfu/ext-name"
+    "url": "https://github.com/zigamacele/lien"
   },
   "bugs": {
-    "url": "https://github.com/antfu/ext-name/issues"
-  },
-  "sponsor": {
-    "url": "https://github.com/sponsors/antfu"
+    "url": "https://github.com/zigamacele/lien/issues"
   },
   "categories": [
     "Other"
@@ -29,11 +26,26 @@
     "dist"
   ],
   "engines": {
-    "vscode": "^1.83.0"
+    "vscode": "^1.84.0"
   },
   "activationEvents": [
     "onStartupFinished"
   ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "lien.addConnection",
+        "title": "Lien: Add Connection"
+      },
+      {
+        "command": "lien.clear",
+        "title": "Lien: Clear"
+      }
+    ]
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/zigamacele"
+  },
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
     "dev": "nr build --watch",
