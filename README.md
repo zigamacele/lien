@@ -1,15 +1,13 @@
-# ext-name
-
-<a href="https://marketplace.visualstudio.com/items?itemName=antfu.ext-name" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/antfu.ext-name.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
-
-## Sponsors
-
 <p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg">
-    <img src='https://cdn.jsdelivr.net/gh/antfu/static/sponsors.png'/>
-  </a>
+  <img src="./res/icon.png" height="160"/>
 </p>
+
+<h1 align="center">Lien</h1>
+
+VSCode extension for creating and managing custom links in the status bar, providing quick access to important resources right from your editor.
+
+<img width="600" alt="Screenshot 2024-04-20 at 17 29 11" src="https://github.com/zigamacele/lien/assets/19758116/2bcfb42c-f8ed-4a81-bbe0-4055607290f3">
 
 ## License
 
-[MIT](./LICENSE) License © 2022 [Anthony Fu](https://github.com/antfu)
+[MIT](./LICENSE) License © 2024 [Ziga Macele](https://github.com/zigamacele)
