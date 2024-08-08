@@ -2,7 +2,7 @@
   "publisher": "zigamacele",
   "name": "lien",
   "displayName": "Lien",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "packageManager": "pnpm@9.0.1",
   "description": "Extension for creating and managing custom links in the status bar, providing quick access to important resources right from your editor.",
