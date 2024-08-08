@@ -2,7 +2,7 @@
   "publisher": "zigamacele",
   "name": "lien",
   "displayName": "Lien",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "packageManager": "pnpm@9.0.1",
   "description": "Extension for creating and managing custom links in the status bar, providing quick access to important resources right from your editor.",
@@ -32,22 +32,61 @@
     "onStartupFinished"
   ],
   "contributes": {
-    "commands": [
-      {
-        "command": "lien.addConnection",
-        "title": "Lien: Add Connection"
+
+    "configuration": {
+      "type": "object",
+      "title": "Lien Settings",
+      "definitions": {
+        "linkObject": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "Name of the link"
+            },
+            "icon": {
+              "type": "string",
+              "description": "Icon for the link"
+            },
+            "link": {
+              "type": "string",
+              "description": "URL of the link"
+            },
+            "tooltip": {
+              "type": "string",
+              "description": "Tooltip of the link"
+            }
+          }
+        }
       },
-      {
-        "command": "lien.clear",
-        "title": "Lien: Clear"
+      "properties": {
+        "lien.user.links": {
+          "type": "array",
+          "description": "Custom links to display in the status bar",
+          "items": {
+            "$ref": "#/definitions/linkObject"
+          },
+          "default": []
+        },
+        "lien.workspace.links": {
+          "type": "array",
+          "description": "Workspace-specific links to display in the status bar",
+          "items": {
+            "$ref": "#/definitions/linkObject"
+          },
+          "default": []
+        }
       }
-    ]
+    }
   },
   "sponsor": {
     "url": "https://github.com/sponsors/zigamacele"
   },
   "extensionPack": [
     "fabiospampinato.vscode-open-in-github"
+  ],
+  "enabledApiProposals": [
+    "telemetry"
   ],
   "scripts": {
     "build": "tsup src/index.ts --external vscode",
